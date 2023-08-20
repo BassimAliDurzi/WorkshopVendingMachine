@@ -24,7 +24,9 @@ public class App {
         if (balance >= amount) {
             double restAmount = balance - amount;
             System.out.println("The rest  amount kr: " + restAmount);
-            System.out.println("Please take the remaining amount from the machine");
+            if (restAmount > 0) {
+                System.out.println("Please take the remaining amount from the machine");
+            }
         } else {
             throw new IllegalArgumentException("Insufficient amount");
         }
